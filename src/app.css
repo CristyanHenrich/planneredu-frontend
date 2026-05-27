@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f0eee9;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --pe-primary:    #004E98;
+    --pe-secondary:  #FF6700;
+    --pe-bg:         #FFFFFF;
+    --pe-bg-alt:     #F5F6F8;
+    --pe-error:      #FF2D5F;
+    --pe-success:    #4CD964;
+    --pe-warning:    #FFB42E;
+    --pe-text:       #14213D;
+    --pe-text-sec:   #6B7280;
+    --pe-stroke:     #E4E4E7;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Responsividade para Kanban */
+@media (max-width: 768px) {
+  .kanban-col-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .kanban-card-padding {
+    padding: 12px;
+  }
+}
+
+/* Garantir scroll horizontal funcione em todos os navegadores */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes blink {
+  0%, 50%   { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s infinite;
+}

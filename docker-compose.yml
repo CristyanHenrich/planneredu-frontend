@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  planneredu-frontend:
+    container_name: planneredu-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      - VITE_API_URL=http://planneredu-backend:8080
+      - BODY_SIZE_LIMIT=536870912
+    networks:
+      - traefik_proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.planneredu-frontend.rule=Host(`app.planneredu.com.br`)"
+      - "traefik.http.routers.planneredu-frontend.entrypoints=websecure"
+      - "traefik.http.routers.planneredu-frontend.tls=true"
+      - "traefik.http.routers.planneredu-frontend.tls.certresolver=le"
+      - "traefik.http.services.planneredu-frontend.loadbalancer.server.port=3000"
+      - "traefik.http.routers.planneredu-frontend.priority=1"
+
+networks:
+  traefik_proxy:
+    external: true

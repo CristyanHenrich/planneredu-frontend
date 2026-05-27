@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <!-- Icon group -->
+  <!-- Book left page -->
+  <path d="M40 64 C40 64 11 53 8 18 L8 13 C8 10 10.5 8 13 9 L40 20 L40 64Z" fill="#004E98"/>
+  <!-- Book right page -->
+  <path d="M40 64 C40 64 69 53 72 18 L72 13 C72 10 69.5 8 67 9 L40 20 L40 64Z" fill="#004E98"/>
+  <!-- Book bottom curve -->
+  <path d="M16 64 Q40 74 64 64" stroke="#003A75" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Checkmark orange -->
+  <path d="M25 34 L36 46 L55 26" stroke="#FF6700" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Text "Planner" -->
+  <text x="84" y="52" font-family="'Montserrat','Arial Black',sans-serif" font-weight="800" font-size="34" fill="#004E98">Planner</text>
+  <!-- Text "Edu" -->
+  <text x="224" y="52" font-family="'Montserrat','Arial Black',sans-serif" font-weight="800" font-size="34" fill="#FF6700">Edu</text>
+</svg>
